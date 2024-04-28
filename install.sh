@@ -10,7 +10,8 @@ if ! command -v pacman >/dev/null 2>&1;then printf "\e[31m[$0]: pacman not found
 prevent_sudo_or_root
 startask (){
 printf "\e[34m[$0]: Hi there! Before we start:\n"
-printf 'This script only works for ArchLinux and Arch-based distros.\n'
+printf 'This script 1. only works for ArchLinux and Arch-based distros.\n'
+printf '            2. does not handle system-level/hardware stuff like Nvidia drivers\n'
 printf "\e[31m"
 printf "Please CONFIRM that you HAVE ALREADY BACKED UP \"$HOME/.config/\" and \"$HOME/.local/\" folders!\n"
 printf "\e[0m"
@@ -173,13 +174,7 @@ else ask_bibata=true
 fi
 if $ask_bibata;then showfun install-bibata;v install-bibata;fi
 
-if command -v LaTeX >/dev/null 2>&1;then
-  echo -e "\e[33m[$0]: Program \"MicroTeX\" already exists, no need to install.\e[0m"
-  echo -e "\e[34mYou can reinstall it in order to update to the latest version anyway.\e[0m"
-  ask_MicroTeX=$ask
-else ask_MicroTeX=true
-fi
-if $ask_MicroTeX;then showfun install-MicroTeX;v install-MicroTeX;fi
+
 
 #####################################################################################
 printf "\e[36m[$0]: 3. Copying + Configuring\e[0m\n"
@@ -291,4 +286,3 @@ case $existed_hypr_conf in
      printf "\e[33mPlease use \"~/.config/hypr/hyprland.conf.new\" as a reference for a proper format.\e[0m\n"
      printf "\e[33mIf this is your first time installation, you must overwrite \"~/.config/hypr/hyprland.conf\" with \"~/.config/hypr/hyprland.conf.new\".\e[0m\n"
 ;;esac
-
