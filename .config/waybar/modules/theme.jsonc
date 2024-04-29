@@ -1,0 +1,11 @@
+    "custom/theme": {
+        "format": "{}",
+        "rotate": ${r_deg},
+        "exec": "echo ; echo 󰟡 switch theme",
+        "on-click": "~/.local/bin/waybar/themeswitch.sh -n",
+        "on-click-right": "~/.local/bin/waybar/themeswitch.sh -p",
+        "on-click-middle": "sleep 0.1 && ~/.local/bin/waybar/themeselect.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+

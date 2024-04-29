@@ -1,0 +1,11 @@
+    "custom/wbar": {
+        "format": "{}", //    //
+        "rotate": ${r_deg},
+        "exec": "echo ; echo  switch bar //  dock",
+        "on-click": "~/.local/bin/waybar/wbarconfgen.sh n",
+        "on-click-right": "~/.local/bin/waybar/wbarconfgen.sh p",
+        "on-click-middle": "sleep 0.1 && quickapps.sh kitty firefox spotify code dolphin",
+        "interval" : 86400,
+        "tooltip": true
+    },
+
