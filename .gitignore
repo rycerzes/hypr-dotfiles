@@ -4,3 +4,5 @@
 .config/ags/scss/_material.scss
 /cache
 ags-experimental/
+pkg-installer.sh
+theme-swithcher.sh
