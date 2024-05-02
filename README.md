@@ -13,4 +13,8 @@
 - [ ] grub themes
 - [ ] sddm themes
 - [ ] fix ags cheatsheet size
-- [ ] 
+- [ ] stay up to date with ags commit in scriptdata/installers
+- [ ] fix scripts not getting executions perm
+- [ ] fix AIButton showing up
+- [ ] all configs not being transferred to ~/.config
+- [ ] cava & firefox themes

@@ -190,7 +190,7 @@ v mkdir -p "$HOME"/.{config,cache,local/{bin,share}}
 case $SKIP_MISCCONF in
   true) sleep 0;;
   *)
-    for i in $(find .config/ -mindepth 1 -maxdepth 1 ! -name 'ags' ! -name 'fish' ! -name 'hypr' -exec basename {} \;); do
+    for i in $(find .config/ -mindepth 1 -maxdepth 1 ! -name 'ags' ! -name 'hypr' -exec basename {} \;); do
       i=".config/$i"
       echo "[$0]: Found target: $i"
       if [ -d "$i" ];then v rsync -av --delete "$i/" "$HOME/$i/"
@@ -200,12 +200,12 @@ case $SKIP_MISCCONF in
     ;;
 esac
 
-case $SKIP_FISH in
-  true) sleep 0;;
-  *)
-    v rsync -av --delete .config/fish/ "$HOME"/.config/fish/
-    ;;
-esac
+# case $SKIP_FISH in
+#   true) sleep 0;;
+#   *)
+#     v rsync -av --delete .config/fish/ "$HOME"/.config/fish/
+#     ;;
+# esac
 
 # For AGS
 case $SKIP_AGS in
